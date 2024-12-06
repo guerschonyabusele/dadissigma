@@ -5,101 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How long has it been since Perry peed inside?</title>
     <style>
+        /* Body Style */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             padding: 50px;
+            background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
         }
+
+        /* Counter Box */
         #counter {
-            font-size: 40px;
+            font-size: 45px;
             font-weight: bold;
             margin-top: 20px;
-        }
-        button {
-            font-size: 30px;
-            padding: 20px 40px;
-            margin-top: 30px;
-            cursor: pointer;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 10px;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>How long has it been since Perry peed inside?</h1>
-
-    <div id="counter">0 seconds</div>
-
-    <button id="resetButton">Reset Timer (Perry peed)</button>
-
-    <script>
-        let lastPeedTime = Date.now(); // Store the last time Perry peed (when the page loads)
-
-        // Function to update the counter every second
-        function updateCounter() {
-            const currentTime = Date.now();
-            const timeElapsed = currentTime - lastPeedTime;
-
-            const seconds = Math.floor(timeElapsed / 1000);
-            const minutes = Math.floor(seconds / 60);
-            const hours = Math.floor(minutes / 60);
-            const days = Math.floor(hours / 24);
-
-            // Formatting the time
-            const displayTime = `${days} days, ${hours % 24} hours, ${minutes % 60} minutes, ${seconds % 60} seconds`;
-
-            // Update the counter on the page
-            document.getElementById("counter").textContent = displayTime;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            color: #333;
+            transition: all 0.3s ease;
         }
 
-        // Reset the timer when the button is clicked (when Perry pees)
-        document.getElementById("resetButton").addEventListener("click", function() {
-            lastPeedTime = Date.now(); // Reset the time to now
-        });
-
-        // Update the counter every second
-        setInterval(updateCounter, 1000);
-    </script>
-
-</body>
-</html>
-Changes:
-Button Size: The button now has a larger font size (30px), with bigger padding (20px 40px), making it more prominent.
-Title Update: The title on the page is now "How long has it been since Perry peed inside?".
-Feel free to copy this code into an HTML file and open it in your browser to see the updated page!
-
-
-You said:
-gpt make the reset time a red button
-ChatGPT said:
-ChatGPT
-Sure! Below is the updated code where the "Reset Timer" button is now red:
-
-html
-Copy code
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How long has it been since Perry peed inside?</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+        #counter:hover {
+            background-color: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
         }
-        #counter {
-            font-size: 40px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
+
+        /* Button Style */
         button {
             font-size: 30px;
             padding: 20px 40px;
@@ -108,20 +45,36 @@ Copy code
             background-color: #f44336; /* Red color */
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
+
         button:hover {
             background-color: #d32f2f; /* Darker red on hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Title Style */
+        h1 {
+            font-family: 'Verdana', sans-serif;
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <h1>How long has it been since Perry peed inside?</h1>
+    <div>
+        <h1>How long has it been since Perry peed inside?</h1>
 
-    <div id="counter">0 seconds</div>
+        <div id="counter">0 seconds</div>
 
-    <button id="resetButton">Reset Timer (Perry peed)</button>
+        <button id="resetButton">Reset Timer (Perry peed)</button>
+    </div>
 
     <script>
         let lastPeedTime = Date.now(); // Store the last time Perry peed (when the page loads)
