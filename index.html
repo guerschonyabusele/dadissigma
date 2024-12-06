@@ -77,7 +77,8 @@
     </div>
 
     <script>
-        let lastPeedTime = Date.now(); // Store the last time Perry peed (when the page loads)
+        // Get the stored lastPeedTime from localStorage, or set to current time if not available
+        let lastPeedTime = localStorage.getItem("lastPeedTime") || Date.now();
 
         // Function to update the counter every second
         function updateCounter() {
@@ -99,6 +100,7 @@
         // Reset the timer when the button is clicked (when Perry pees)
         document.getElementById("resetButton").addEventListener("click", function() {
             lastPeedTime = Date.now(); // Reset the time to now
+            localStorage.setItem("lastPeedTime", lastPeedTime); // Save to localStorage
         });
 
         // Update the counter every second
