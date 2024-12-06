@@ -36,26 +36,6 @@
             transform: scale(1.05);
         }
 
-        /* Button Style */
-        button {
-            font-size: 30px;
-            padding: 20px 40px;
-            margin-top: 30px;
-            cursor: pointer;
-            background-color: #f44336; /* Red color */
-            color: white;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #d32f2f; /* Darker red on hover */
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-
         /* Title Style */
         h1 {
             font-family: 'Verdana', sans-serif;
@@ -63,6 +43,32 @@
             color: white;
             margin-bottom: 20px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Button Style (Circular Red Button) */
+        button {
+            font-size: 30px;
+            padding: 0; /* Remove padding */
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            border-radius: 50%; /* Make it circular */
+            margin-top: 30px;
+            cursor: pointer;
+            background-color: #f44336; /* Red color */
+            color: white;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            display: flex; /* Use flexbox to center text */
+            justify-content: center;
+            align-items: center;
+            text-align: center; /* Ensure the text is centered */
+        }
+
+        button:hover {
+            background-color: #d32f2f; /* Darker red on hover */
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -73,7 +79,7 @@
 
         <div id="counter">0 seconds</div>
 
-        <button id="resetButton">Reset Timer (Perry peed)</button>
+        <button id="resetButton">Reset</button>
     </div>
 
     <script>
