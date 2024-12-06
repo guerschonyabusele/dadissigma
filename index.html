@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perry's Pee Timer</title>
+    <title>How long has it been since Perry peed inside?</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,14 +16,14 @@
             margin-top: 20px;
         }
         button {
-            font-size: 20px;
-            padding: 10px 20px;
-            margin-top: 20px;
+            font-size: 30px;
+            padding: 20px 40px;
+            margin-top: 30px;
             cursor: pointer;
             background-color: #4CAF50;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
         }
         button:hover {
             background-color: #45a049;
@@ -58,7 +58,7 @@
             document.getElementById("counter").textContent = displayTime;
         }
 
-        // Reset the timer when the button is clicked (when Perry pees inside)
+        // Reset the timer when the button is clicked (when Perry pees)
         document.getElementById("resetButton").addEventListener("click", function() {
             lastPeedTime = Date.now(); // Reset the time to now
         });
